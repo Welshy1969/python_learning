@@ -1,4 +1,5 @@
 #!/usr/bin/python
+#like-a sumbowdee
 import random
 from datetime import datetime
 from time import sleep
