@@ -1,5 +1,11 @@
-#!/usr/bin/python
-#like-a sumbowdee
+#!/usr/bin/python3
+
+#Ascii border icons: ╔  ╗  ╚  ╝  ╠  ╣  ╟  ╢  ═  ║  ╦  ╩  ╤  ╧  │  ━
+
+#╔════╤════╤════╤════╤════╤════╤════╗
+#║ 33 │  3 │    │    │    │    │    ║
+#╚════╧════╧════╧════╧════╧════╧════╝
+
 import random
 from datetime import datetime
 from time import sleep
@@ -28,7 +34,21 @@ for x in range(num_games):
         lotto_array.append(ball_num)
 
     print ("Game " + str(x+1))
-    print (sorted(lotto_array)) ## Printed after sorting lowest to highest
+
+    print("╔════╤════╤════╤════╤════╤════╗\n║", end="")
+    
+    for z in range(6):
+        if z > 0:
+            print("│", end="")
+        if len(str(sorted(lotto_array)[z])) == 1:
+            print("  " + str(sorted(lotto_array)[z]) + " ", end="")
+        else:
+            print(" " + str(sorted(lotto_array)[z]) + " ", end="")
+    
+    print("║")
+
+    print("╚════╧════╧════╧════╧════╧════╝")
+    #print (sorted(lotto_array)) ## Printed after sorting lowest to highest
 
     sleep(1.75)
 
