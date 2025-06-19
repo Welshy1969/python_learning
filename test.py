@@ -26,14 +26,15 @@ for x in range(num_games):
     now = datetime.now()
     epoch_time=now.timestamp()
     random.seed=epoch_time
-    print(epoch_time)
+    #print(epoch_time)
+
     for y in range(6):
         ball_num = random.randint(1,45)
         while ball_num in lotto_array:
             ball_num = random.randint(1,45)
         lotto_array.append(ball_num)
 
-    print ("Game " + str(x+1))
+    print ("\nGame " + str(x+1) + ":")
 
     print("╔════╤════╤════╤════╤════╤════╗\n║", end="")
     
